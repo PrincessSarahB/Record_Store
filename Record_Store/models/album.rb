@@ -1,3 +1,5 @@
+require_relative('../db/sql_runner')
+
 class Album
 
 attr_reader :id
@@ -12,7 +14,12 @@ def initialize(options)
 
 end
 
-
+def save()
+  sql = "INSERT INTO albums (title, quantity, genre, artist_id) VALUES ($1, $2, $3, $4) RETURNING id;"
+  values = [@title, @quantity, @genre, @artist_id]
+  album = SqlRunner.run(sql, values).first
+  @id = album['id'].to_i
+end
 
 
 end

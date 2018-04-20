@@ -8,7 +8,7 @@ class SqlRunner
       db.prepare("query", sql)
       result = db.exec_prepared( "query", values )
     ensure
-      db.close() if db != nil #close database so long as it's not nil
+      db.close() if db != nil 
     end
     return result
   end
