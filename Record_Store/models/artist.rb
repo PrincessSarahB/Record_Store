@@ -8,7 +8,12 @@ def initialize(options)
 
 end
 
-
+def save()
+  sql = "INSERT INTO artists (name) VALUES ($1) RETURNING id;"
+  values = [@name]
+  artist = SqlRunner.run(sql, values).first
+  @id = artist['id'].to_i
+end
 
 
 

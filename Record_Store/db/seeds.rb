@@ -7,22 +7,28 @@ artist1 = Artist.new({
   "name" => "Frank Turner"
 })
 
+artist1.save()
+
 artist2 = Artist.new({
   "name" => "We Are Scientists"
   })
+artist2.save()
 
   artist3 = Artist.new({
     "name" => "Run the Jewels"
     })
+  artist3.save()
 
     artist4 = Artist.new({
       "name" => "Taylor Swift"
       })
+    artist4.save()
 
       artist5 = Artist.new({
         "name" => "Biffy Clyro"
         })
-
+      artist5.save()
+      
 album1 = Album.new({
   "title" => "Sleep Is For The Week",
   "quantity" => 5,
