@@ -28,4 +28,10 @@ def self.all()
   return result
 end
 
+def self.delete_all()
+    sql = "DELETE FROM albums"
+    values = []
+    SqlRunner.run(sql, values)
+  end
+
 end
