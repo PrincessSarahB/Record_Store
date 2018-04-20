@@ -99,3 +99,7 @@ album1 = Album.new({
                 })
 
                   album8.save()
+
+                  binding.pry
+
+                  nil
