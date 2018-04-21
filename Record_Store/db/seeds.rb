@@ -87,7 +87,7 @@ album1 = Album.new({
 
             album7 = Album.new({
               "title" => "1989",
-              "quantity" => 5,
+              "quantity" => 11,
               "genre" => "pop",
               "artist_id" => artist4.id
               })

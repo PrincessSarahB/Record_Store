@@ -21,6 +21,7 @@ def save()
   @id = album['id'].to_i
 end
 
+
 def self.all()
   sql = "SELECT * FROM albums"
   albums = SqlRunner.run( sql )
