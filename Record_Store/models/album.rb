@@ -21,6 +21,16 @@ def save()
   @id = album['id'].to_i
 end
 
+def stock_level()
+  if @quantity >= 6
+    return "medium"
+  elsif @quantity <= 5
+    return "low"
+  elsif quantity >=10
+    return "high"
+  end
+
+end
 
 def self.all()
   sql = "SELECT * FROM albums"
