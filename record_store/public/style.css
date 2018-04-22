@@ -61,3 +61,11 @@ a:visited {
   justify-content: space-between;
   color: palegoldenrod;
 }
+
+.album_img{
+  display: inline-block;
+}
+.album_info{
+
+  display: inline-block;
+}
