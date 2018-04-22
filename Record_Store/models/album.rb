@@ -21,14 +21,22 @@ def save()
   @id = album['id'].to_i
 end
 
+def self.find_album(artist_id)
+sql = "SELECT * FROM albums WHERE artist_id = $1"
+values = [artist_id]
+result = SqlRunner.run(sql, values)
+return result
+end
+
 def stock_level()
-  if @quantity >= 6
-    return "medium"
-  elsif @quantity <= 5
-    return "low"
-  elsif quantity >=10
-    return "high"
-  end
+  return @quantity
+  # if @quantity >= 10
+  #   return "high"
+  # elsif @quantity >= 5 && @quantity <= 9
+  #   return "medium"
+  # elsif @quantity <= 4
+  #   return "low"
+  # end
 
 end
 

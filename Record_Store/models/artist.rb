@@ -18,6 +18,20 @@ def save()
   @id = artist['id'].to_i
 end
 
+def self.find_by_name(name)
+sql = "SELECT * from artists WHERE name=$1;"
+values = [name]
+artists = SqlRunner.run(sql, values)
+return artists.map {|artist| Artist.new(artist)}
+end
+
+def find_albums(title)
+sql = "SELECT * FROM albums WHERE artist_id = $1 AND title = $2;"
+values = [@id, title]
+albums = SqlRunner.run(sql, values).first
+return albums.map{|album| Album.new(album)}
+end
+
 
   def self.all()
     sql = "SELECT * FROM artists"
