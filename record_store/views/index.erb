@@ -1,27 +1,21 @@
 <h1> Inventory </h1>
 
-<table>
-  <tr>
-    <th>Artist</th>
-    <th></th>
-    <th>Album</th>
-    <th></th>
-    <th>Quantity</th>
-    <th></th>
-    <th>Genre</th>
-  </tr>
+<div class="grid">
+  <div class="grid-row">
+    <div class ="cell">Artist</div>
+    <div class ="cell">Album</div>
+    <div class ="cell">Quantity</div>
+    <div class ="cell">Genre</div>
+  </div>
 
     <% for artist in @artists %>
     <% artist.albums.each do |album| %>
-    <tr>
-    <td><%= artist.name %></td>
-    <td>|</td>
-    <td><%= album.title %></td>
-    <td>|</td>
-    <td><%= album.quantity %></td>
-    <td>|</td>
-    <td><%= album.genre %></td>
-  </tr>
+    <div class="grid-row">
+    <div class="cell"><%= artist.name %></div>
+    <div class="cell"><%= album.title %></div>
+    <div class="cell"><%= album.quantity %></div>
+    <div class="cell"><%= album.genre %></div>
+  </div>
   <% end %>
   <%end%>
-</table>
+</div>
