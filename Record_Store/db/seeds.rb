@@ -2,7 +2,7 @@ require_relative('../models/artist.rb')
 require_relative('../models/album.rb')
 
 
-require('pry-byebug')
+# require('pry-byebug')
 
 Album.delete_all()
 Artist.delete_all()
@@ -103,6 +103,13 @@ album1 = Album.new({
 
                   album8.save()
 
-                  binding.pry
+                  # binding.pry
+                  #
+                  # nil
 
-                  nil
+                  def get_test_data()
+# return {
+#   :artist => [artist1, artist3, artist4],
+#   :albums => [album1, album6, album7]
+# }
+                  end
