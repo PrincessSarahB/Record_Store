@@ -1,11 +1,8 @@
-<h1>Artist</h1>
+<h2><%= @artist.name %></h2>
 
-<h2>Albums:</h2>
-
-<ul>
-  <% @artist.albums.each do |album| %>
-  <li><%= album.title %></li>
-    <li><%= album.quantity %></li>
-      <li><%= album.genre %></li>
+<h3>Albums:</h3>
+<%@artist.albums.each do |album| %>
+<h3><%= album.title %></h3>
+<p>Quantity: <%= album.quantity %></p>
+<p>Genre: <%= album.genre %></p>
   <% end %>
-</ul>

@@ -2,8 +2,7 @@ require_relative('../db/sql_runner')
 
 class Album
 
-  attr_reader :id
-  attr_accessor :title, :quantity, :genre, :artist_id
+  attr_reader :id, :title, :quantity, :genre, :artist_id
   def initialize(options)
 
     @id = options['id'].to_i
@@ -49,11 +48,12 @@ class Album
     return result
   end
 
-  def self.find()
+  def self.find(id)
     sql = "SELECT * FROM albums WHERE id = $1"
-    values = [@id]
+    values = [id]
     album = SqlRunner.run(sql, values)
-    return album
+    result = Album.new(album.first)
+  return result
   end
 
   def self.delete_all()

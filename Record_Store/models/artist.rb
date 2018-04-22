@@ -1,8 +1,9 @@
 require_relative('../db/sql_runner')
+require_relative('./album.rb')
 
 class Artist
 
-  attr_accessor :id, :name
+  attr_reader :id, :name
 
   def initialize(options)
 

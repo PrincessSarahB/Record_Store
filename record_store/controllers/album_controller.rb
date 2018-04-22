@@ -10,6 +10,6 @@ erb(:"album/index")
 end
 
 get "/album/:id" do
-  @album = Album.find(params[:id])
+  @album = Album.find(params['id'].to_i)
   erb(:"album/show")
 end
