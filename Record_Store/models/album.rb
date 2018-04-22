@@ -49,12 +49,11 @@ class Album
     return result
   end
 
-  def self.find(id)
+  def self.find()
     sql = "SELECT * FROM albums WHERE id = $1"
-    values = [id]
+    values = [@id]
     album = SqlRunner.run(sql, values)
-    result = Album.new(album.first)
-    return result
+    return album
   end
 
   def self.delete_all()
