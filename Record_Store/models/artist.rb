@@ -18,6 +18,13 @@ def save()
   @id = artist['id'].to_i
 end
 
+def self.find(id)
+sql = "SELECT * from artists WHERE id=$1;"
+values = [id]
+artist = SqlRunner.run(sql, values)
+return artist
+end
+
 def self.find_by_name(name)
 sql = "SELECT * from artists WHERE name=$1;"
 values = [name]
