@@ -1,0 +1,8 @@
+
+<h1><%= @album.title %></h1>
+
+<p>Quantity: <%= @album.quantity %></p>
+<p>Genre: <%= @album.genre %></p>
+<p>Artist  <% @album.artist.each do |artist| %>
+<%= artist.name %>
+  <% end %>
