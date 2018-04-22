@@ -42,6 +42,13 @@ class Artist
     return result
   end
 
+  def self.sort_all()
+    sql = "SELECT * FROM artists ORDER BY name;"
+    artists = SqlRunner.run( sql )
+    result = artists.map { |artist| Artist.new(artist) }
+    return result
+  end
+
   def self.delete_all()
     sql = "DELETE FROM artists"
     values = []

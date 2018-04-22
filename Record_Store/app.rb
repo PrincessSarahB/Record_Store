@@ -5,5 +5,7 @@ require_relative('controllers/artist_controller')
 
 
 get '/' do
+  @artists = Artist.sort_all()
+
   erb( :index )
 end
