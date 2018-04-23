@@ -4,7 +4,6 @@ require('minitest/rg')
 require_relative('../artist.rb')
 require_relative('../album.rb')
 
-# require('pry')
 
 class AlbumTest < MiniTest::Test
 
@@ -44,8 +43,7 @@ def setup()
         'genre' => "pop",
         'artist_id' => @artist2.id
         })
-        # binding.pry
-        # nil
+
 end
 
 def test_stock_level__low()
