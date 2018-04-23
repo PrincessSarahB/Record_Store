@@ -35,7 +35,7 @@ def setup()
       'title' => "Love, Ire and Song",
       'quantity' => 2,
       'genre' => "folk punk",
-      'artist_id' => @artist1.id
+      'artist_id' => @artist1.id,
       'buy_price' => 6.50,
       'sell_price' => 10.00
       })
@@ -45,7 +45,7 @@ def setup()
         'title' => "1989",
         'quantity' => 11,
         'genre' => "pop",
-        'artist_id' => @artist2.id
+        'artist_id' => @artist2.id,
         'buy_price' => 4.00,
         'sell_price' => 8.00
         })
@@ -68,5 +68,5 @@ end
 def test_margin
   assert_equal(4.00, @album3.margin)
   assert_equal(3.50, @album2.margin)
-
+end 
 end

@@ -52,7 +52,10 @@ class Album
     elsif @quantity <= 4
       return "low"
     end
-
+  end
+  def margin()
+    margin = @sell_price -= @buy_price
+    return margin
   end
 
   def self.all()
