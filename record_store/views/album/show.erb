@@ -12,5 +12,6 @@
     <p>Artist:  <% @album.artist.each do |artist| %>
       <%= artist.name %>
       <% end %>
+    <p> Stock Level: <%=@album.stock_level() %> </p>
     </div>
   </div>
