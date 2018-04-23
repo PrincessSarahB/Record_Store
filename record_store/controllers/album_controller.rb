@@ -20,6 +20,18 @@ get "/album/:id" do
   erb(:"album/show")
 end
 
+get "/album/:id/edit" do
+  @album = Album.find(params['id'].to_i )
+  @artists = Artist.all
+  erb(:"album/edit")
+end
+
+post "/album/:id/edit" do
+  @album = Album.new(params)
+  @album.update()
+redirect to "/"
+end
+
 post "/album" do
 new_album = Album.new(params)
 new_album.save()
