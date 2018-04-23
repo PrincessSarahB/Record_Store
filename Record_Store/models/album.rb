@@ -19,6 +19,12 @@ class Album
     @id = album['id'].to_i
   end
 
+  def delete()
+    sql = "DELETE FROM albums
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run( sql, values )
+  end
 
   def artist()
     sql = "SELECT * FROM artists WHERE id = $1"
