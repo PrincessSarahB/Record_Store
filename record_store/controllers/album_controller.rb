@@ -11,7 +11,7 @@ end
 
 get "/album/new" do
 @artists = Artist.all()
-erb(:new)
+erb(:"album/new")
 end
 
 
@@ -24,4 +24,10 @@ post "/album" do
 new_album = Album.new(params)
 new_album.save()
 redirect to "/"
+end
+
+post "/album/:id/delete" do
+  album = Album.find(params['id'].to_i)
+  album.delete()
+  redirect to "/"
 end

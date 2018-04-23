@@ -24,3 +24,9 @@ new_artist = Artist.new(params)
 new_artist.save()
 redirect to "/"
 end
+
+post "/artist/:id/delete" do
+  artist = Artist.find(params['id'].to_i)
+  artist.delete()
+  redirect to "/"
+end
