@@ -10,18 +10,19 @@ class Album
     @quantity = options['quantity'].to_i
     @genre = options['genre']
     @artist_id = options['artist_id'].to_i
+    @url = options['url']
   end
 
   def save()
-    sql = "INSERT INTO albums (title, quantity, genre, artist_id) VALUES ($1, $2, $3, $4) RETURNING id;"
-    values = [@title, @quantity, @genre, @artist_id]
+    sql = "INSERT INTO albums (title, quantity, genre, artist_id, url) VALUES ($1, $2, $3, $4, $5) RETURNING id;"
+    values = [@title, @quantity, @genre, @artist_id, url]
     album = SqlRunner.run(sql, values).first
     @id = album['id'].to_i
   end
 
   def update()
-    sql = "UPDATE albums SET (title, quantity, genre, artist_id) = ($1, $2, $3, $4) WHERE id = $5;"
-    values = [@title, @quantity, @genre, @artist_id, @id]
+    sql = "UPDATE albums SET (title, quantity, genre, artist_id) = ($1, $2, $3, $4, $5) WHERE id = $6;"
+    values = [@title, @quantity, @genre, @artist_id, @url, @id]
     SqlRunner.run(sql, values)
   end
 
