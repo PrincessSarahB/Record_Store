@@ -17,6 +17,12 @@
 <% end %>
 </select>
 
+<label for="buy_price"> Buy Price: </label>
+<input type="text" id="buy_price" name="buy_price" value="<%=@album.buy_price%>">
+
+<label for="sell_price"> Sell Price: </label>
+<input type="text" id="sell_price" name="sell_price" value="<%=@album.sell_price%>">
+
 <input type="submit" value="Edit stock">
 
 </form>
