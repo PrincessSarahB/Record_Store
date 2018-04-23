@@ -3,26 +3,26 @@
 <head>
   <title>Championship Vinyl</title>
 </head>
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="/style.css">
 <body>
   <div class="pagehead">
-  <h1> Championship Vinyl </h1>
-</div>
-<nav>
-  <ul>
-    <li> <a href="/">Inventory</a> </li>
-    <li>
-      <a href="/album">Albums</a> </li>
-      <li> <a href="/artist">Artists</a> </li>
-      <li> <a href="/album/new">Add New Stock </a> </li>
-      <li> <a href="/artist/new">Add New Artist </a> </li>
-    <li><form action="/search" method="post">
-        <input type="search" name ="query">
-        <input type="submit" value="search">
-      </form></li>
+    <h1> Championship Vinyl </h1>
+  </div>
+  <nav>
+    <ul>
+      <li> <a href="/">Inventory</a> </li>
+      <li>
+        <a href="/album">Albums</a> </li>
+        <li> <a href="/artist">Artists</a> </li>
+        <li> <a href="/album/new">Add New Stock </a> </li>
+        <li> <a href="/artist/new">Add New Artist </a> </li>
+        <li><form action="/search" method="post">
+          <input type="search" name ="query">
+          <input type="submit" value="search">
+        </form></li>
 
-  </ul>
-</nav>
-  <%= yield %>
-</body>
-</html>
+      </ul>
+    </nav>
+    <%= yield %>
+  </body>
+  </html>

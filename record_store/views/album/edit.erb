@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../style.css">
 
 <form action="/album/<%= @album.id%>/edit" method="post">
 <label for="title">Album Title: </label>
@@ -11,9 +10,9 @@
 <input type="text" id="genre" name="genre" value="<%=@album.genre%>">
 
 <label for="artist"> Artist: </label>
-<select name="artist_id" id="artist_id">
+<select name="artist_id" id="artist_id" selected="<%= @album.artist_id%>">
   <% @artists.each do |artist| %>
-  <option value="<%=artist.id%>"><%=artist.name%></option>
+  <option value=<%=artist.id%>selected><%=artist.name%></option>
 <% end %>
 </select>
 

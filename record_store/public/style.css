@@ -23,6 +23,12 @@ nav li {
   font-family: georgia;
 }
 
+.new{
+  display:flex;
+  flex-direction: column;
+  jusitfy-content: space-between;
+}
+
 a:link {
   color: darkorange;
 }
