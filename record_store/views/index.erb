@@ -7,6 +7,10 @@
     <div class ="cell">Quantity</div>
     <div class ="cell">Genre</div>
     <div class="cell"> Stock Level </div>
+    <div class="cell"> Buy Price </div>
+    <div class="cell"> Sell Price</div>
+    <div class="cell"> Margin </div>
+    <div class="cell"> Total Profit </div>
   </div>
 
     <% for artist in @artists %>
@@ -17,6 +21,10 @@
     <div class="cell"><%= album.quantity %></div>
     <div class="cell"><%= album.genre %></div>
     <div class="cell"><%= album.stock_level() %></div>
+    <div class="cell">£<%= album.buy_price %> </div>
+      <div class="cell">£<%= album.sell_price %> </div>
+        <div class="cell">£<%= album.margin() %> </div>
+      <div class="cell">£<%= album.profit() %> </div>
   </div>
   <% end %>
   <%end%>

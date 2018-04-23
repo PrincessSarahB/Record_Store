@@ -2,7 +2,7 @@ require_relative('../models/artist.rb')
 require_relative('../models/album.rb')
 
 
-# require('pry-byebug')
+require('pry-byebug')
 
 Album.delete_all()
 Artist.delete_all()
@@ -51,7 +51,7 @@ album1 = Album.new({
     "genre" => "folk punk",
     "artist_id" => artist1.id,
     "url" => "https://i.imgur.com/QkClQ0L.jpg",
-    "buy_price" => 5.50,
+    "buy_price" => 4.50,
     "sell_price" => 10.00
     })
 
@@ -63,8 +63,8 @@ album1 = Album.new({
       "genre" => "folk punk",
       "artist_id" => artist1.id,
       "url" => "https://i.imgur.com/SE8HKdB.gif",
-      "buy_price" => 5.50,
-      "sell_price" => 10.00
+      "buy_price" => 4.50,
+      "sell_price" => 9.00
       })
         album3.save()
 
@@ -74,8 +74,8 @@ album1 = Album.new({
         "genre" => "indie",
         "artist_id" => artist2.id,
         "url" => "https://i.imgur.com/1oaLG2l.jpg",
-        "buy_price" => 5.50,
-        "sell_price" => 10.00
+        "buy_price" => 3.00,
+        "sell_price" => 8.00
         })
           album4.save()
 
@@ -85,8 +85,8 @@ album1 = Album.new({
           "genre" => "indie",
           "artist_id" => artist2.id,
           "url" => "https://i.imgur.com/cZ0YhZB.jpg",
-          "buy_price" => 5.50,
-          "sell_price" => 10.00
+          "buy_price" => 3.00,
+          "sell_price" => 7.50
           })
 
             album5.save()
@@ -97,7 +97,7 @@ album1 = Album.new({
             "genre" => "hip hop",
             "artist_id" => artist3.id,
             "url" => "https://i.imgur.com/sbdDQDi.jpg",
-            "buy_price" => 5.50,
+            "buy_price" => 5.00,
             "sell_price" => 10.00
             })
 
@@ -110,7 +110,7 @@ album1 = Album.new({
               "artist_id" => artist4.id,
               "url" => "https://i.imgur.com/ehUgso7.png",
               "buy_price" => 5.50,
-              "sell_price" => 10.00
+              "sell_price" => 11.00
               })
 
                 album7.save()
@@ -121,12 +121,12 @@ album1 = Album.new({
                 "genre" => "rock",
                 "artist_id" => artist5.id,
                 "url" => "https://i.imgur.com/eg82h00.jpg",
-                "buy_price" => 5.50,
-                "sell_price" => 10.00
+                "buy_price" => 4.50,
+                "sell_price" => 8.50
                 })
 
                   album8.save()
 
-                  # binding.pry
-                  #
-                  # nil
+                  binding.pry
+
+                  nil
