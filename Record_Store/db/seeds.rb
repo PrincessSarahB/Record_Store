@@ -38,8 +38,10 @@ album1 = Album.new({
   "quantity" => 5,
   "genre" => "folk punk",
   "artist_id" => artist1.id,
-  "url" => "https://i.imgur.com/HURz1ul.jpg"
-  })
+  "url" => "https://i.imgur.com/HURz1ul.jpg",
+  "buy_price" => 5.50,
+  "sell_price" => 10.00
+    })
 
   album1.save()
 
@@ -48,7 +50,9 @@ album1 = Album.new({
     "quantity" => 7,
     "genre" => "folk punk",
     "artist_id" => artist1.id,
-    "url" => "https://i.imgur.com/QkClQ0L.jpg"
+    "url" => "https://i.imgur.com/QkClQ0L.jpg",
+    "buy_price" => 5.50,
+    "sell_price" => 10.00
     })
 
       album2.save()
@@ -58,7 +62,9 @@ album1 = Album.new({
       "quantity" => 9,
       "genre" => "folk punk",
       "artist_id" => artist1.id,
-      "url" => "https://i.imgur.com/SE8HKdB.gif"
+      "url" => "https://i.imgur.com/SE8HKdB.gif",
+      "buy_price" => 5.50,
+      "sell_price" => 10.00
       })
         album3.save()
 
@@ -67,7 +73,9 @@ album1 = Album.new({
         "quantity" => 5,
         "genre" => "indie",
         "artist_id" => artist2.id,
-        "url" => "https://i.imgur.com/1oaLG2l.jpg"
+        "url" => "https://i.imgur.com/1oaLG2l.jpg",
+        "buy_price" => 5.50,
+        "sell_price" => 10.00
         })
           album4.save()
 
@@ -76,7 +84,9 @@ album1 = Album.new({
           "quantity" => 4,
           "genre" => "indie",
           "artist_id" => artist2.id,
-          "url" => "https://i.imgur.com/cZ0YhZB.jpg"
+          "url" => "https://i.imgur.com/cZ0YhZB.jpg",
+          "buy_price" => 5.50,
+          "sell_price" => 10.00
           })
 
             album5.save()
@@ -86,7 +96,9 @@ album1 = Album.new({
             "quantity" => 3,
             "genre" => "hip hop",
             "artist_id" => artist3.id,
-            "url" => "https://i.imgur.com/sbdDQDi.jpg"
+            "url" => "https://i.imgur.com/sbdDQDi.jpg",
+            "buy_price" => 5.50,
+            "sell_price" => 10.00
             })
 
               album6.save()
@@ -96,7 +108,9 @@ album1 = Album.new({
               "quantity" => 11,
               "genre" => "pop",
               "artist_id" => artist4.id,
-              "url" => "https://i.imgur.com/ehUgso7.png"
+              "url" => "https://i.imgur.com/ehUgso7.png",
+              "buy_price" => 5.50,
+              "sell_price" => 10.00
               })
 
                 album7.save()
@@ -106,7 +120,9 @@ album1 = Album.new({
                 "quantity" => 7,
                 "genre" => "rock",
                 "artist_id" => artist5.id,
-                "url" => "https://i.imgur.com/eg82h00.jpg"
+                "url" => "https://i.imgur.com/eg82h00.jpg",
+                "buy_price" => 5.50,
+                "sell_price" => 10.00
                 })
 
                   album8.save()

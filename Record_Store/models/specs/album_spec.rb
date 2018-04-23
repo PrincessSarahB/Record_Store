@@ -25,7 +25,9 @@ def setup()
     'title' => "Sleep is for the Week",
     'quantity' => 6,
     'genre' => "folk punk",
-    'artist_id' => @artist1.id
+    'artist_id' => @artist1.id,
+    'buy_price' => 5.50,
+    'sell_price' => 10.00
     })
 
     @album2 = Album.new({
@@ -34,6 +36,8 @@ def setup()
       'quantity' => 2,
       'genre' => "folk punk",
       'artist_id' => @artist1.id
+      'buy_price' => 6.50,
+      'sell_price' => 10.00
       })
 
       @album3 = Album.new({
@@ -42,6 +46,8 @@ def setup()
         'quantity' => 11,
         'genre' => "pop",
         'artist_id' => @artist2.id
+        'buy_price' => 4.00,
+        'sell_price' => 8.00
         })
 
 end

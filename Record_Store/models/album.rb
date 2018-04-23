@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Album
 
-  attr_reader :id, :title, :quantity, :genre, :artist_id, :url
+  attr_reader :id, :title, :quantity, :genre, :artist_id, :url, :buy_price, :sell_price
 
   def initialize(options)
     @id = options['id'].to_i
@@ -11,6 +11,8 @@ class Album
     @genre = options['genre']
     @artist_id = options['artist_id'].to_i
     @url = options['url']
+    @buy_price = options['buy_price'].to_f
+    @sell_price = options['sell_price'].to_f
   end
 
   def save()
