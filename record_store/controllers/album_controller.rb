@@ -9,6 +9,11 @@ get "/album" do
 erb(:"album/index")
 end
 
+get "/album/new" do
+@artists = Artist.all
+erb(:new)
+end
+
 get "/album/:id" do
   @album = Album.find(params['id'].to_i)
   erb(:"album/show")

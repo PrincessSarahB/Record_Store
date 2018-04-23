@@ -3,14 +3,13 @@ require_relative('../db/sql_runner')
 class Album
 
   attr_reader :id, :title, :quantity, :genre, :artist_id
-  def initialize(options)
 
+  def initialize(options)
     @id = options['id'].to_i
     @title = options['title']
     @quantity = options['quantity'].to_i
     @genre = options['genre']
     @artist_id = options['artist_id'].to_i
-
   end
 
   def save()
@@ -30,7 +29,7 @@ class Album
   end
 
   def stock_level()
-    
+
     if @quantity >= 10
       return "high"
     elsif @quantity >= 5 && @quantity <= 9

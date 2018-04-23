@@ -2,20 +2,20 @@
 <div class="">
 
 
-<h2><%= @artist.name %></h2>
+  <h2><%= @artist.name %></h2>
 
-<h3>Albums:</h3>
-<%@artist.albums.each do |album| %>
-<div>
-<div class="album_img">
-<img src="https://place.cat/c/100/100" alt="">
-</div>
-<div class="album_info">
-<h3><%= album.title %></h3>
-<p>Quantity: <%= album.quantity %></p>
-<p>Genre: <%= album.genre %></p>
-</div>
-</div>
+  <h3>Albums:</h3>
+  <%@artist.albums.each do |album| %>
+  <div>
+    <div class="album_img">
+      <img src="https://place.cat/c/100/100" alt="">
+    </div>
+    <div class="album_info">
+      <h3><%= album.title %></h3>
+      <p>Quantity: <%= album.quantity %></p>
+      <p>Genre: <%= album.genre %></p>
+    </div>
+  </div>
   <% end %>
 </div>
 
