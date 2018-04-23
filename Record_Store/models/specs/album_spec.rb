@@ -65,4 +65,8 @@ def test_stock_level__high()
 assert_equal("high", @album3.stock_level)
 end
 
+def test_margin
+  assert_equal(4.00, @album3.margin)
+  assert_equal(3.50, @album2.margin)
+
 end
