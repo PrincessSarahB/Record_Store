@@ -18,6 +18,11 @@ get '/artist/:id' do
   erb(:"artist/show")
 end
 
+get "/artist/:id/edit" do
+  @artist = Artist.find(params['id'].to_i )
+  @albums = Album.all
+  erb(:edit)
+end
 
 post "/artist" do
 new_artist = Artist.new(params)

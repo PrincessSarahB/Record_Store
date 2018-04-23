@@ -10,7 +10,7 @@
   <%@artist.albums.each do |album| %>
   <div>
     <div class="album_img">
-      <img src="https://place.cat/c/100/100" alt="">
+      <img src="<%=album.url%>" alt="album_cover" height="145" width="145">
     </div>
     <div class="album_info">
       <h3><%= album.title %></h3>

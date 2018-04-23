@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Album
 
-  attr_reader :id, :title, :quantity, :genre, :artist_id
+  attr_reader :id, :title, :quantity, :genre, :artist_id, :url
 
   def initialize(options)
     @id = options['id'].to_i
@@ -15,7 +15,7 @@ class Album
 
   def save()
     sql = "INSERT INTO albums (title, quantity, genre, artist_id, url) VALUES ($1, $2, $3, $4, $5) RETURNING id;"
-    values = [@title, @quantity, @genre, @artist_id, url]
+    values = [@title, @quantity, @genre, @artist_id, @url]
     album = SqlRunner.run(sql, values).first
     @id = album['id'].to_i
   end
