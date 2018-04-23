@@ -68,5 +68,10 @@ end
 def test_margin
   assert_equal(4.00, @album3.margin)
   assert_equal(3.50, @album2.margin)
-end 
+end
+
+def test_profit
+assert_equal(44.00, @album3.profit)
+assert_equal(27.00, @album1.profit)
+end
 end
