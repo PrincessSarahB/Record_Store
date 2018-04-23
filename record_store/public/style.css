@@ -38,6 +38,10 @@ a:visited {
   align-items: center;
   text-align: center;
 }
+
+.grid {
+  overflow:scroll;
+}
 .grid-row {
   display: flex;
   border: 1px solid palegoldenrod;
@@ -60,6 +64,7 @@ a:visited {
     padding: 10px;
   justify-content: space-between;
   color: palegoldenrod;
+  overflow: scroll;
 }
 
 .album_img{

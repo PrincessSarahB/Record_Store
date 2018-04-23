@@ -12,8 +12,8 @@
     <% for artist in @artists %>
     <% artist.albums.each do |album| %>
     <div class="grid-row">
-    <div class="cell"><%= artist.name %></div>
-    <div class="cell"><%= album.title %></div>
+    <div class="cell"><a href="/artist/<%= artist.id %>"><%= artist.name %></a></div>
+    <div class="cell"><a href="/album/<%= album.id %>"><%= album.title %></a></div>
     <div class="cell"><%= album.quantity %></div>
     <div class="cell"><%= album.genre %></div>
     <div class="cell"><%= album.stock_level() %></div>
