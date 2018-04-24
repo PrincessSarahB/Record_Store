@@ -41,12 +41,10 @@ class Artist
   end
 
   def self.search(term)
-    WHERE(name like?, "%#{term}%")
-# sql ="SELECT * FROM artists WHERE name LIKE %#{term}%;"
-# values = [@name, term]
-# answers = SqlRunner.run(sql, values)
-# result = answers.map{|answer| Artist.new(answer)}
-# return result
+    sql = "SELECT * FROM artists WHERE name ILIKE '%#{term}%';"
+    answers = SqlRunner.run(sql)
+    result = answers.map{|answer| Artist.new(answer)}
+    return result
 
   end
 

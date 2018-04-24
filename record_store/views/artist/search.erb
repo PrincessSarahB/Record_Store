@@ -1,9 +1,6 @@
-<% if @answer.present? %>
+<% if @searches %>
 
 <%@searches.each do |search| %>
-<p><%= answer.name %></p>
-<% else %>
-<p> Sorry that artist does not exist </p>
-
-<%end%>
-<%end%>
+<p><%= search.name %></p>
+ <% end %>
+ <% end %>
