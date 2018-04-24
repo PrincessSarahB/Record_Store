@@ -9,3 +9,8 @@ get '/' do
 
   erb( :index )
 end
+
+post '/search' do
+  @searches = Artist.search("%#{params[:term]}%")
+erb(:"artist/search")
+end

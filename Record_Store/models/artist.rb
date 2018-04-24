@@ -40,6 +40,15 @@ class Artist
     return result
   end
 
+  def self.search(term)
+sql ="SELECT * FROM artists WHERE name LIKE $1;"
+values = [@name, term]
+answers = SqlRunner.run(sql, values)
+result = answers.map{|answer| Artist.new(answer)}
+return result
+
+  end
+
   def self.find(id)
     sql = "SELECT * from artists WHERE id=$1;"
     values = [id]
