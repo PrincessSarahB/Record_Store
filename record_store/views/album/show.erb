@@ -1,6 +1,7 @@
 
 
   <div>
+
     <div class="album_img">
       <img src="<%=@album.url%>" alt="album_cover" height="145" width="145">
     </div
@@ -13,6 +14,7 @@
       <%= artist.name %>
       <% end %>
     <p> Stock Level: <%=@album.stock_level() %> </p>
+    <p> Profit: <%=@album.profit() %> </p>
     </div>
     <form action="/album/<%=@album.id%>/delete" method="post">
 <input type="submit" value="Delete Album">

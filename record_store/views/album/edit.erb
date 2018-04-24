@@ -12,8 +12,13 @@
 <label for="artist"> Artist: </label>
 <select name="artist_id" id="artist_id" selected="<%= @album.artist_id%>">
   <% @artists.each do |artist| %>
-  <option value=<%=artist.id%>selected><%=artist.name%></option>
-<% end %>
+  <% if artist.id == @album.artist_id %>
+  <option value=<%=artist.id%> selected><%=artist.name%></option>
+  <% else %>
+  <option value=<%=artist.id%>><%=artist.name%></option>
+  <% end %>
+  <% end %>
+
 </select>
 
 <label for="buy_price"> Buy Price: </label>

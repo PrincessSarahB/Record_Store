@@ -2,11 +2,11 @@
 <div class="">
 
 
-  <h2><%= @artist.name %></h2>
+  <h1><%= @artist.name %></h1>
   <form action="/artist/<%=@artist.id%>/delete" method="post">
 <input type="submit" value="Delete Artist">
 </form>
-  <h3>Albums:</h3>
+  <h2>Albums:</h2>
   <%@artist.albums.each do |album| %>
   <div>
     <div class="album_img">
@@ -17,7 +17,7 @@
       <p>Quantity: <%= album.quantity %></p>
       <p>Genre: <%= album.genre %></p>
       <p> Stock Level: <%= album.stock_level() %></p>
-
+    <p> Profit: <%=album.profit() %> </p>
     </div>
   </div>
   <% end %>
