@@ -11,6 +11,10 @@ get '/' do
 end
 
 post '/search' do
-  @searches = Artist.search("%#{params[:term]}%")
-erb(:"artist/search")
+@searches = Artist.all
+if params[:term]
+  @searches = Artist.search[:term.to_s]
+else
+  @searches = Artist.all
+end
 end
