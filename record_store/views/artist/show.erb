@@ -17,7 +17,7 @@
       <p>Quantity: <%= album.quantity %></p>
       <p>Genre: <%= album.genre %></p>
       <p> Stock Level: <%= album.stock_level() %></p>
-    <p> Profit: <%=album.profit() %> </p>
+    <p> Profit: <%= "%.2f" % album.profit() %> </p>
     </div>
   </div>
   <% end %>

@@ -12,6 +12,7 @@ class Artist
 
   end
 
+#method to save artists
   def save()
     sql = "INSERT INTO artists (name) VALUES ($1) RETURNING id;"
     values = [@name]
@@ -19,12 +20,14 @@ class Artist
     @id = artist['id'].to_i
   end
 
+#method to update artists
   def update()
     sql = "UPDATE artists SET (name) = ($1) WHERE id = $2"
     values = [@name, @id]
     SqlRunner.run(sql, values)
   end
 
+  #method to delete artist by id number
   def delete()
     sql = "DELETE FROM artists
     WHERE id = $1"
@@ -32,6 +35,7 @@ class Artist
     SqlRunner.run( sql, values )
   end
 
+#method to delete albums by artist id
   def albums()
     sql = "SELECT * FROM albums WHERE artist_id = $1;"
     values = [@id]

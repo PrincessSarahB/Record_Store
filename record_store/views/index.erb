@@ -21,10 +21,10 @@
     <div class="cell"><%= album.quantity %></div>
     <div class="cell"><%= album.genre %></div>
     <div class="cell"><%= album.stock_level() %></div>
-    <div class="cell">£<%= album.buy_price %> </div>
-      <div class="cell">£<%= album.sell_price %> </div>
-        <div class="cell">£<%= album.margin() %> </div>
-      <div class="cell">£<%= album.profit() %> </div>
+    <div class="cell">£<%= "%.2f" % album.buy_price %> </div>
+      <div class="cell">£<%= "%.2f" % album.sell_price %> </div>
+        <div class="cell">£<%= "%.2f" % album.margin() %> </div>
+      <div class="cell">£<%= "%.2f" % album.profit %> </div>
   </div>
   <% end %>
   <%end%>

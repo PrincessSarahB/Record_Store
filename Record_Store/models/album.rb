@@ -53,14 +53,15 @@ class Album
       return "low"
     end
   end
+  
   def margin()
     @margin = @sell_price - @buy_price
     return @margin
   end
 
   def profit()
-profit = margin() * @quantity
-return profit
+    profit = margin() * @quantity
+    return profit
   end
 
   def self.all()
