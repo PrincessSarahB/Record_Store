@@ -9,7 +9,7 @@ get '/artist' do
 end
 
 get '/artist/new' do
-@artists = Artist.all()
+  @artists = Artist.all()
   erb(:"artist/new")
 end
 
@@ -25,9 +25,9 @@ get "/artist/:id/edit" do
 end
 
 post "/artist" do
-new_artist = Artist.new(params)
-new_artist.save()
-redirect to "/"
+  new_artist = Artist.new(params)
+  new_artist.save()
+  redirect to "/"
 end
 
 post "/artist/:id/delete" do

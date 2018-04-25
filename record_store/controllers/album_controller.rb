@@ -5,13 +5,13 @@ require_relative("../models/album.rb")
 require_relative("../models/artist.rb")
 
 get "/album" do
-@albums = Album.all
-erb(:"album/index")
+  @albums = Album.all
+  erb(:"album/index")
 end
 
 get "/album/new" do
-@artists = Artist.all()
-erb(:"album/new")
+  @artists = Artist.all()
+  erb(:"album/new")
 end
 
 
@@ -29,13 +29,13 @@ end
 post "/album/:id/edit" do
   @album = Album.new(params)
   @album.update()
-redirect to "/"
+  redirect to "/"
 end
 
 post "/album" do
-new_album = Album.new(params)
-new_album.save()
-redirect to "/"
+  new_album = Album.new(params)
+  new_album.save()
+  redirect to "/"
 end
 
 post "/album/:id/delete" do

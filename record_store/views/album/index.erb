@@ -2,8 +2,8 @@
 
 <h1>Albums</h1>
 
-  <% for album in @albums %>
-<div class="albums"> 
+<% for album in @albums %>
+<div class="albums">
   <a href="/album/<%= album.id %>"><%= album.title %></a>
 </div>
-  <% end %>
+<% end %>

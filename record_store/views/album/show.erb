@@ -1,25 +1,25 @@
 
 
-  <div>
+<div>
 
-    <div class="album_img">
-      <img src="<%=@album.url%>" alt="album_cover" height="145" width="145">
+  <div class="album_img">
+    <img src="<%=@album.url%>" alt="album_cover" height="145" width="145">
     </div
     <div class="album_info">
-    <h2><%= @album.title %></h2>
+      <h2><%= @album.title %></h2>
 
-    <p>Quantity: <%= @album.quantity %></p>
-    <p>Genre: <%= @album.genre %></p>
-    <p>Artist:  <% @album.artist.each do |artist| %>
-      <%= artist.name %>
-      <% end %>
-    <p> Stock Level: <%=@album.stock_level() %> </p>
-    <p> Profit: <%= "%.2f" % @album.profit() %> </p>
+      <p>Quantity: <%= @album.quantity %></p>
+      <p>Genre: <%= @album.genre %></p>
+      <p>Artist:  <% @album.artist.each do |artist| %>
+        <%= artist.name %>
+        <% end %>
+        <p> Stock Level: <%=@album.stock_level() %> </p>
+        <p> Profit: <%= "%.2f" % @album.profit() %> </p>
+      </div>
+      <form action="/album/<%=@album.id%>/delete" method="post">
+        <input type="submit" value="Delete Album">
+      </form>
+      <form action="/album/<%=@album.id%>/edit" method="get">
+        <input type="submit" value="Edit Album">
+      </form>
     </div>
-    <form action="/album/<%=@album.id%>/delete" method="post">
-<input type="submit" value="Delete Album">
-</form>
-<form action="/album/<%=@album.id%>/edit" method="get">
-<input type="submit" value="Edit Album">
-</form>
-  </div>
