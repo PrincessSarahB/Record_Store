@@ -1,7 +1,10 @@
-<% if @searches %>
+<% if @searches.length > 0 %>
 
   <%@searches.each do |search| %>
   <p><a href="/artist/<%=search.id%>"><%= search.name %></a></p>
 
+
   <% end %>
+  <%else%>
+  <p> Sorry the artist does not exist </p>
   <% end %>
